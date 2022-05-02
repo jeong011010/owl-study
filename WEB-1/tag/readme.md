@@ -17,6 +17,10 @@ HTML 언어를 설명하는 도구.
 
 - img : 이미지
 
+- li : 목록 (list)
+- ul : li 부모 태그 (unordered list)
+- ol : li 부모 태그 (ordered list)
+
 ## tag 특징
 
 
@@ -33,4 +37,11 @@ HTML 언어를 설명하는 도구.
 'src = (주소)' 속성 값을 이용하여 이미지를 불러올 수 있다.<br>
 뿐만 아니라 width, size 등등 다양한 속성값이 존재한다.<br>
 아마 css에서 배울 듯 하다.<br>
+</details>
+
+<details>
+<summary>고정된 관계 태그</summary>
+'li' 태그는 리스트를 나타내는 태그이다<br>
+해당 태그를 사용할 때, 'ul', 'ol' 로 감싸줘 li에 속성을 부여할 수 있다.<br>
+목록끼리 구분을 하기 위한 경계의 역할을 해주는 것이다.<br>
 </details>
