@@ -32,3 +32,16 @@ __웹 서버__
 3. 방문자로서 github의 컴퓨터에 설치된 웹서버에 접속한다.
 
 <img srv="https://s3-ap-northeast-2.amazonaws.com/opentutorials-user-file/module/3135/7778.jpeg">
+
+
+## 파일 찾기와 웹서버의 차이점
+
+- chrome web server 기능을 이용하여 웹서버를 열어본다.
+![캡처](https://user-images.githubusercontent.com/28985560/166479184-76e8a125-fc8f-4178-8870-5615237a93f7.PNG)
+
+- 파일탐색기에서 직접 열어본다.
+![캡처](https://user-images.githubusercontent.com/28985560/166479348-8a5df33b-060a-463f-a55c-19bb2a58d152.PNG)
+
+웹 서버에서 열었을 때는 '127.0.0.1:8887' 이라는 ip와 port가 붙는다는 것이다.  
+<br>
+__Web browser__ 에서 Internet Protocol Address와 Port를 통해 하나의 __Web Server__ 를 가르키고, 서버 안에 있는 __Web__ 파일을 여는 것이다.
