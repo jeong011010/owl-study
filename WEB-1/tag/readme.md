@@ -64,3 +64,12 @@ HTML 언어를 설명하는 도구.
 영어로 썼는데 자판 그대로 한글로 나오면 읽기 굉장히 힘듬<br>
 그것처럼 __UTF-8__이라는 형식으로 썼기 때문에 UTF-8 형식으로 해석해서 표시하라는 뜻<br>
 </details>
+
+<details>
+<summary>하이퍼 텍스트</summary>
+HTML의 HT가 Hyper Text를 의미한다.<br>
+'a' 태그에서 하이퍼링크 속성을 사용할 수 있다.<br>
+'href' (HyperText Reference) 속성을 사용하여 a 태그를 클릭하여 링크를 걸 수 있는 것이다.<br>
+'href'는 link의 목적지를 가르키는 중요한 속성이다.<br><br>
+'target' 속성을 이용하여 현재 또는 새로운 탭, 브라우저에 링크되도록 할 수 있다.<br>
+</details>
