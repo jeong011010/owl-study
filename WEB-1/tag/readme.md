@@ -23,6 +23,12 @@ HTML 언어를 설명하는 도구.
 - ul : li 부모 태그 (unordered list)
 - ol : li 부모 태그 (ordered list)
 
+- title : 제목 (tap title)
+- meta : 문자 해석 [utf-8]
+- body : 본문 태그
+- head : 본문을 설명하는 태그
+- html : body, head를 감싸는 태그
+
 ## tag 특징
 
 
@@ -45,8 +51,16 @@ HTML 언어를 설명하는 도구.
 </details>
 
 <details>
-<summary>고정된 관계 태그</summary>
+<summary>고정된 부모자식 관계 태그</summary>
 'li' 태그는 리스트를 나타내는 태그이다<br>
 해당 태그를 사용할 때, 'ul', 'ol' 로 감싸줘 li에 속성을 부여할 수 있다.<br>
-목록끼리 구분을 하기 위한 경계의 역할을 해주는 것이다.<br>
+목록끼리 구분을 하기 위한 경계의 역할을 해주는 것이다.<br><br>
+'html' 태그 또한 'body', 'head' 태그를 감싸는 역할이다.<br>
+</details>
+
+<details>
+<summary>meta charset="utf-8" 이게 뭐냐면</summary>
+언어가 저장된 방식대로 다시 해석해줘야 하는 것<br>
+영어로 썼는데 자판 그대로 한글로 나오면 읽기 굉장히 힘듬<br>
+그것처럼 __UTF-8__이라는 형식으로 썼기 때문에 UTF-8 형식으로 해석해서 표시하라는 뜻<br>
 </details>
