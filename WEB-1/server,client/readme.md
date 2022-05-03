@@ -27,6 +27,7 @@ __웹 서버__
 
 - github의 page 기능을 이용하여 page 배포
 <br>
+
 1. github에 html 파일을 업로드하여 github의 서버 컴퓨터에 웹서버가 켜진다.
 2. 웹 주소를 배포한다.
 3. 방문자로서 github의 컴퓨터에 설치된 웹서버에 접속한다.
@@ -36,10 +37,12 @@ __웹 서버__
 
 ## 파일 찾기와 웹서버의 차이점
 
-- chrome web server 기능을 이용하여 웹서버를 열어본다.
+- chrome web server 기능을 이용하여 웹서버를 열어본다.  
+
 ![캡처](https://user-images.githubusercontent.com/28985560/166479184-76e8a125-fc8f-4178-8870-5615237a93f7.PNG)
 
-- 파일탐색기에서 직접 열어본다.
+- 파일탐색기에서 직접 열어본다.  
+
 ![캡처](https://user-images.githubusercontent.com/28985560/166479348-8a5df33b-060a-463f-a55c-19bb2a58d152.PNG)
 
 웹 서버에서 열었을 때는 '127.0.0.1:8887' 이라는 ip와 port가 붙는다는 것이다.  
