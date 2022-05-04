@@ -29,8 +29,9 @@ HTML 언어를 설명하는 도구.
 - head : 본문을 설명하는 태그
 - html : body, head를 감싸는 태그
 
-## tag 특징
+- iframe : 현재 브라우저에 또다른 HTML 페이지를 삽입 (inline Frame)
 
+## tag 특징
 
 <details>
 <summary>p와 br의 차이</summary>
@@ -72,4 +73,12 @@ HTML의 HT가 Hyper Text를 의미한다.<br>
 'href' (HyperText Reference) 속성을 사용하여 a 태그를 클릭하여 링크를 걸 수 있는 것이다.<br>
 'href'는 link의 목적지를 가르키는 중요한 속성이다.<br><br>
 'target' 속성을 이용하여 현재 또는 새로운 탭, 브라우저에 링크되도록 할 수 있다.<br>
+</details>
+
+<details>
+<summary>iframe</summary>
+iframe이란 Inline Frame의 약자<br>
+
+__현재 브라우저에 렌더링되고 있는 문서 안에 또 다른 HTML 페이지를 삽입할 수 있도록 하는 기능__<br>
+video, audio 태그들로 대체가 가능하지만, 다른 url의 페이지를 현재 페이지의 일부처럼 렌더링 할 수 있는 특징을 가지고 있음<br>
 </details>
