@@ -82,3 +82,12 @@ iframe이란 Inline Frame의 약자<br>
 __현재 브라우저에 렌더링되고 있는 문서 안에 또 다른 HTML 페이지를 삽입할 수 있도록 하는 기능__<br>
 video, audio 태그들로 대체가 가능하지만, 다른 url의 페이지를 현재 페이지의 일부처럼 렌더링 할 수 있는 특징을 가지고 있음<br>
 </details>
+
+## 부록
+
+- 댓글 기능
+
+![캡처](https://user-images.githubusercontent.com/28985560/166646141-45ea7419-67de-4e1c-8112-8ff3b9e99614.PNG)
+
+[DISQUS](https://disqus.com/)의 서비스를 이용하여 댓글 기능을 구현해본다.  
+물론 웹 서버로 실행해야 기능이 실행된다.
