@@ -12,7 +12,6 @@ __Cascading Style Sheets__
 <br>
 
 style을 사용하는 방법.
-
 <br><br>
 
 1. style 태그 사용  
@@ -32,8 +31,7 @@ a{ <- 선택자. (모든 a태그를 선택)
     color:red; <- 선언, 효과 (선택된 태그에 대한 속성)
 }
 ```
-
-<br><br>
+<br>
 
 2. style 속성을 사용  
 ```
@@ -42,7 +40,7 @@ ex) a href="1.html" style="color:red"
 ```
 
 위와 같이 해당 태그에만 style을 설정해줄 수 있음.
-
+<br><br>
 
 ## 선택자
 
@@ -54,6 +52,7 @@ ex) a href="1.html" style="color:red"
 
 위 순서대로 우선순위가 높다.  
 구체적인 것을 포괄적인 것보다 우선순위를 높인다.
+<br><br>
 
 ### 하위 선택자
 
@@ -80,6 +79,7 @@ __CSS에서 아이템을 정렬하기 위한 레이아웃 기능__
 >- width, height 속성이 __적용되지 않음__
 >- padding, margin 속성이 __적용되지 않음__
 >- 인라인인 경우 포함된 라인 속성에 따라감
+<br><br>
 
 ### 박스 모델 속성
 
@@ -89,6 +89,7 @@ __CSS에서 아이템을 정렬하기 위한 레이아웃 기능__
 - display : 박스 모델 속성
 - width : 넓이
 - height : 높이
+<br><br>
 
 ## GRID
 
