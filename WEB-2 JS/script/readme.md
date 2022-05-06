@@ -30,13 +30,6 @@ __기본 틀__
 - onchange = "" : 바꼈을 때 이벤트 실행
 - onkeydown = "" : 눌릴 때 이벤트 실행
 
-<br><br>
-
-- "".length : 문자 개수 반환
-- "".toUpperCase() : 대문자로 변환
-- "".indexOf('문자') : 해당 문자의 시작 위치 반환
-
-
 ## 특징
 
 <details>
@@ -71,13 +64,4 @@ __기본 틀__
 이를 통해 사용자와 웹페이지가 상호 작용이 가능하도록 함.
 <br><br>
 다양한 event handler와 event type을 통해 여러가지 동작으로 상호작용 할 수 있음
-</details>
-
-<details>
-<summary>1+1과 '1'+'1'</summary>
-웬만한 다른 언어 syntex에서도 통일되는 것 처럼 JS에서도 Data Type이 있음.<br><br>
-문자열과 숫자가 다르며, 더할수 있음<br><br>
-
-- 1+1 은 num+num 이므로 2가 반환됨<br>
-- '1'+'1'은 string+string 이므로 11이 반환됨<br>
 </details>
