@@ -24,8 +24,11 @@ __기본 틀__
 - alert("내용")
 > JS 경고창 출력
 
-- document.querySelector('태그').style.속성='변경내용';
-> 특정 태그의 속성을 변경내용에 따라 변경.
+- document.querySelector('태그')
+> 특정 태그를 선택
+
+- document.querySelector('태그').style.속성='변경내용'
+> 특정 태그의 속성 style을 변경내용대로 변경
 
 ## 속성값
 
