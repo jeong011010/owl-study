@@ -23,16 +23,17 @@
                     mr.blue sky
                 </li>
             </ol>
-            <div style="text-align: center;">
-                <input type="button" value="day" onclick="
+            <input id="night_day" type="button" value="day" onclick="
+                    if(document.querySelector('#night_day').value === 'night'){
                     document.querySelector('body').style.backgroundColor='white';
                     document.querySelector('body').style.color='black';
-                    ">
-                <input type="button" value="night" onclick="
+                    document.querySelector('#night_day').value = 'day';
+                    } else {
                     document.querySelector('body').style.backgroundColor='black';
                     document.querySelector('body').style.color='white';
-                    ">
-            </div>
+                    document.querySelector('#night_day').value = 'night';
+                    }
+            ">
         </div>
         <div id="article">
             <h3>잘가라 구름아</h3>
