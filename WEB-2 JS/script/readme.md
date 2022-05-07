@@ -20,20 +20,36 @@ __기본 틀__
 
 위와 같이 JS를 사용할 수 있다.
 
+<br>
 
 - document.write("내용") 
 > JS 출력문이다.  
 > 따옴표로 감싸면 안의 내용이 출력된다.  
 > 감싸지 않으면 안의 내용이 실행되어 결과가 출력된다.  
 
+<br>
+
 - alert("내용")
 > JS 경고창 출력
+
+<br>
 
 - document.querySelector('태그')
 > 특정 태그를 선택
 
+<br>
+
 - document.querySelector('태그').style.속성='변경내용'
 > 특정 태그의 속성 style을 변경내용대로 변경
+
+<br>
+
+- if(조건) {script}
+- else if(조건) {script}
+- else {script}
+> 조건에 따라 script 내용을 실행하거나 하지 않는다.
+
+<br>
 
 ## 속성값
 
