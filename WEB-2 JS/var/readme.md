@@ -51,7 +51,9 @@ true, false로 이루어져 있으며 비교 연산자의 결과에 따라 참 �
 <summary>== 와 == 의 차이</summary>
 a == b 와 a === b 의 결과는 다르다.<br><br>
 == 는 보기에 같은지. === 는 데이터 타입까지 같은지를 보는 것 같다. <br><br>
+
 ex)
+
 ```
 null == undefined // true
 null === undefined // false

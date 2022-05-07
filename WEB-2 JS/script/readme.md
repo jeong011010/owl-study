@@ -87,8 +87,20 @@ __기본 틀__
 
 <details>
 <summary>이벤트</summary>
-브라우저는 이벤트를 감지하고 알려줄 수 있음.  
+브라우저는 이벤트를 감지하고 알려줄 수 있음.<br>
 이를 통해 사용자와 웹페이지가 상호 작용이 가능하도록 함.
 <br><br>
 다양한 event handler와 event type을 통해 여러가지 동작으로 상호작용 할 수 있음
+</details>
+
+<details>
+<summary>리펙토링</summary>
+중복되거나 자기 자신을 가르키는 긴 문장을 짧게 고쳐 보기 쉽게 만드는 과정<br><br>
+
+- this : 자기 자신을 가르키는 syntex
+
+```
+ex) var target = document.querySelector('body');
+위와 같이 함으로써 body를 가르키는 긴 문장을 target 하나로 대체할 수 있음.
+```
 </details>
