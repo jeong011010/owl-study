@@ -5,6 +5,32 @@
     <meta charset="utf-8">
     <title>Kim Jazz - playlist</title>
     <link rel="stylesheet" href="1.css">
+    <script>
+        function nightDayHandler(self) {
+            var target = document.querySelector('body');
+            if (self.value === 'night') {
+                target.style.backgroundColor = 'white';
+                target.style.color = 'black';
+                self.value = 'day';
+                var alist = document.querySelectorAll('a');
+                var i = 0;
+                while (i < alist.length) {
+                    alist[i].style.color = 'blue';
+                    i++;
+                }
+            } else {
+                target.style.backgroundColor = 'black';
+                target.style.color = 'white';
+                self.value = 'night';
+                var alist = document.querySelectorAll('a');
+                var i = 0;
+                while (i < alist.length) {
+                    alist[i].style.color = 'powderblue';
+                    i++;
+                }
+            }
+        }
+    </script>
 </head>
 
 
@@ -24,28 +50,7 @@
                 </li>
             </ol>
             <input id="night_day" type="button" value="day" onclick="
-                var target = document.querySelector('body');
-                if(this.value === 'night'){
-                    target.style.backgroundColor='white';
-                    target.style.color='black';
-                    this.value = 'day';
-                    var alist = document.querySelectorAll('a');
-                    var i =0;
-                    while(i<alist.length){
-                        alist[i].style.color = 'blue';
-                        i++;
-                    }
-                } else {
-                    target.style.backgroundColor='black';
-                    target.style.color='white';
-                    this.value = 'night';
-                    var alist = document.querySelectorAll('a');
-                    var i =0;
-                    while(i<alist.length){
-                        alist[i].style.color = 'powderblue';
-                        i++;
-                    }
-                }
+               nightDayHandler(this);
             ">
         </div>
         <div id="article">
