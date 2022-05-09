@@ -14,13 +14,13 @@
         <div id="nav">
             <ol>
                 <li>
-                    잘가라 구름아
+                    <a href="https://youtu.be/B3FwDz1NOeQ" target="_blank">잘가라 구름아</a>
                 </li>
                 <li>
-                    red bone
+                    <a href="https://youtu.be/Kp7eSUU9oy8" target="_blank">red bone</a>
                 </li>
                 <li>
-                    mr.blue sky
+                    <a href="https://youtu.be/wuJIqmha2Hk" target="_blank">mr.blue sky</a>
                 </li>
             </ol>
             <input id="night_day" type="button" value="day" onclick="
@@ -29,10 +29,22 @@
                     target.style.backgroundColor='white';
                     target.style.color='black';
                     this.value = 'day';
+                    var alist = document.querySelectorAll('a');
+                    var i =0;
+                    while(i<alist.length){
+                        alist[i].style.color = 'blue';
+                        i++;
+                    }
                 } else {
                     target.style.backgroundColor='black';
                     target.style.color='white';
                     this.value = 'night';
+                    var alist = document.querySelectorAll('a');
+                    var i =0;
+                    while(i<alist.length){
+                        alist[i].style.color = 'powderblue';
+                        i++;
+                    }
                 }
             ">
         </div>
