@@ -6,7 +6,7 @@
     <title>Kim Jazz - playlist</title>
     <link rel="stylesheet" href="1.css">
     <script>
-        function setcolor(color) {
+        function LinksSetColor(color) {
             var alist = document.querySelectorAll('a');
             var i = 0;
             while (i < alist.length) {
@@ -14,18 +14,24 @@
                 i++;
             }
         }
+        function bodySetColor(color) {
+            document.querySelector('body').style.backgroundColor = color;
+        }
+        function bodyBackgroundSetColor(color) {
+            document.querySelector('body').style.color = color;
+        }
         function nightDayHandler(self) {
-            var target = document.querySelector('body');
+
             if (self.value === 'night') {
-                target.style.backgroundColor = 'white';
-                target.style.color = 'black';
+                bodyBackgroundSetColor('white');
+                bodySetColor('black');
                 self.value = 'day';
-                setcolor('blue');
+                LinksSetColor('blue');
             } else {
-                target.style.backgroundColor = 'black';
-                target.style.color = 'white';
+                bodyBackgroundSetColor('black');
+                bodySetColor('white');
                 self.value = 'night';
-                setcolor('powderblue');
+                LinksSetColor('powderblue');
             }
         }
     </script>
@@ -47,7 +53,7 @@
                     <a href="https://youtu.be/wuJIqmha2Hk" target="_blank">mr.blue sky</a>
                 </li>
             </ol>
-            <input id="night_day" type="button" value="day" onclick="
+            <input id="night_day" type="button" value="night" onclick="
                nightDayHandler(this);
             ">
         </div>
