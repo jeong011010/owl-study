@@ -189,3 +189,14 @@ ex) C++ - STL(vector, stack, algorithm ...)<br><br>
 ex) sprint, Django, jQuery, React.js ...<br><br>
 
 </details>
+
+<details>
+<summary>UI, API</summary>
+
+User Interface : 사용자가 시스템을 이용하기 위해 사용하는 것<br>
+ex) 모니터, 키보드...<br><br>
+
+Application Programming Interface : 어플을 만들기 위해 프로그래밍하여 만든 조작장치들<br>
+ex) 함수 alert(), echo()...<br><br>
+
+</details>
