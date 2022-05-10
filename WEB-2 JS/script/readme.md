@@ -178,3 +178,14 @@ var 함수이름 = new Function(매개변수, 실행내용);
 })(인자);
 ```
 </details>
+
+<details>
+<summary>라이브러리와 프레임워크</summary>
+
+라이브러리 : 부품들이 잘 정리된 곳<br>
+ex) C++ - STL(vector, stack, algorithm ...)<br><br>
+
+프레임워크 : 어느정도 베이스를 제공하고 추가적인 부분을 사용<br>
+ex) sprint, Django, jQuery, React.js ...<br><br>
+
+</details>
