@@ -6,32 +6,37 @@
     <title>Kim Jazz - playlist</title>
     <link rel="stylesheet" href="1.css">
     <script>
-        function LinksSetColor(color) {
-            var alist = document.querySelectorAll('a');
-            var i = 0;
-            while (i < alist.length) {
-                alist[i].style.color = color;
-                i++;
+        var Links = {
+            setColor: function (color) {
+                var alist = document.querySelectorAll('a');
+                var i = 0;
+                while (i < alist.length) {
+                    alist[i].style.color = color;
+                    i++;
+                }
             }
         }
-        function bodySetColor(color) {
-            document.querySelector('body').style.backgroundColor = color;
-        }
-        function bodyBackgroundSetColor(color) {
-            document.querySelector('body').style.color = color;
+
+        var Body = {
+            SetColor: function (color) {
+                document.querySelector('body').style.backgroundColor = color;
+            },
+            SetBackgroundColor: function (color) {
+                document.querySelector('body').style.color = color;
+            }
         }
         function nightDayHandler(self) {
 
             if (self.value === 'night') {
-                bodyBackgroundSetColor('white');
-                bodySetColor('black');
+                Body.SetBackgroundColor('white');
+                Body.SetColor('black');
                 self.value = 'day';
-                LinksSetColor('blue');
+                Links.setColor('powderblue');
             } else {
-                bodyBackgroundSetColor('black');
-                bodySetColor('white');
+                Body.SetBackgroundColor('black');
+                Body.SetColor('white');
                 self.value = 'night';
-                LinksSetColor('powderblue');
+                Links.setColor('blue');
             }
         }
     </script>

@@ -55,14 +55,25 @@ for (var key in 객체이름)
 <br><br>
 
 
+__객체 함수__<br>
+
+다양한 내장 라이브러리 함수도 이렇게 만들어진 듯 하다.
+
+```
+var 객체이름 {
+    함수이름:function (매개변수){
+        실행내용;
+    }
+}
+```
+
+<br><br>
+
 
 ## 특징
 
 <details>
-<summary>1+1과 '1'+'1'</summary>
-웬만한 다른 언어 syntex에서도 통일되는 것 처럼 JS에서도 Data Type이 있음.<br><br>
-문자열과 숫자가 다르며, 더할수 있음<br><br>
-
-- 1+1 은 num+num 이므로 2가 반환됨<br>
-- '1'+'1'은 string+string 이므로 11이 반환됨<br>
+<summary>document.querySelector('')</summary>
+객체를 배우면서 보다 보니 이것도 객체의 한 종류이다?!<br>
+document라는 객체의 querySelector, write 와 같은 메소드를 사용하는 것이었다.
 </details>
