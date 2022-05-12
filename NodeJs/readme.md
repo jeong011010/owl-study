@@ -40,4 +40,11 @@ ex) const http = require('http');
 ```
 
 위의 문법을 사용하여 해당 모듈을 변수에 받아올 수 있음<br>
-var 을 사용해도 되지만, 모듈을 한번 받아오면 변할 일이 없으므로 주로 const를 사용<br><br>
+var 을 사용해도 되지만, 모듈을 한번 받아오면 변할 일이 없으므로 주로 const를 사용<br>
+require 함수를 사용하여 모듈을 받아올 수 있음<br><br>
+
+## NPM
+
+__Node Package Manager__<br><br>
+Node 계의 앱스토어와 같은 느낌<br>
+다양한 모듈을 설치, 삭제, 업그레이드, 의존성 관리 등을 관리해준다.<br><br>
