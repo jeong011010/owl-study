@@ -75,3 +75,15 @@ npm init
 
 ## CallBack
 
+CallBack : __나중에 호출 당할 함수__<br><br>
+함수의 매개변수로 함수를 넣는다면, 함수가 실행되며 담겨있는 함수가 먼저 실행이 되고, 해당 함수의 return 값에 따라 함수가 실행이 된다.<br>
+함수에 담긴 함수는 해당 함수가 실행될 때 자동으로 호출이 되기 때문에 CallBack 이라고 부른다.<br><br>
+```
+arr = [3,1,2];
+function f(a,b){return a-b;}
+arr.sort(f);
+console.log(arr);
+```
+sort라는 함수에서 __callback함수 f()__ 를 사용한다.
+<br>
+
