@@ -176,3 +176,28 @@ app.get을 사용하여 콜백 함수안에 html을 표시해도 되지만, 지�
 <br>
 위 수업에서는 'jade'를 사용함<br>
 -> 오류 발생해서 찾아보니 라이센스 문제로 'pug'로 바꿔야 함<br><br>
+
+### pug
+
+HTML 코드를 간편하게 짜는 템플릿 엔진 중 하나.<br>
+태그를 사용하지 않고, 탭을 사용하여 이전 태그에 포함시킬 수 있다.<br><br>
+javascript를 사용할 때, '-' 기호를 앞에 붙여 화면에 표시되는 코드가 아님을 알려준다.<br>
+```
+html
+    head
+        title= title
+    body
+        h1 Hello Jade
+        ul
+            -for(var i=0;i<5;i++)
+                li coding
+        div = time
+```
+
+만약 pug파일에서 render에서 받아오고 싶은 것이 있다면 render의 인자로 {이름:매개변수} 로 받아올 수 있다.<br>
+
+```
+app.redner('temp',{time:Date(), title:'Jade'});
+```
+
+__템플릿 엔진과 Express를 결합하기 위해서는 views 폴더에 담긴 pug 파일을 render을 통해 불러온다.__ <br><br>

@@ -1,6 +1,8 @@
 var express = require('express');
 var app = express(); // express 사용 형식
 
+app.locals.pretty = true; // pug code pretty
+
 app.set('view engine', 'pug');
 app.set('views', './views');
 
