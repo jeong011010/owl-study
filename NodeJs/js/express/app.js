@@ -6,6 +6,24 @@ app.locals.pretty = true; // pug code pretty
 app.set('view engine', 'pug');
 app.set('views', './views');
 
+app.get('/topic', function(req, res){
+    //query string의 값은 req로 들어온다
+    var topics = [
+        'Javascript is...',
+        'Nodejs is...',
+        'Express is...'
+    ];
+
+    var output=`
+        <a href="/topic?id=0">JavaScript</a><br>
+        <a href="/topic?id=1">NodeJS</a><br>
+        <a href="/topic?id=2">Express</a><br>
+        ${topics[req.query.id]}
+    `
+
+    res.send(output);
+})
+
 app.get('/template', function(req,res){
     res.render('temp');
 })
