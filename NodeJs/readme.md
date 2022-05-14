@@ -142,6 +142,13 @@ __Router__ 란<br><br>
 여기서 루트에 따라 다른 페이지로 이동하는데, 이것을 해주는 것이 __라우터__ 이다.<br><br>
 
 ```
+http://a.com/login
+http://a.com/home
+http://a.com/topic
+```
+/ 뒤에 따라오는 것을 __path__ 라고 한다.<br>
+
+```
 app.get('', function(req, res){
     ;
 })
@@ -201,3 +208,20 @@ app.redner('temp',{time:Date(), title:'Jade'});
 ```
 
 __템플릿 엔진과 Express를 결합하기 위해서는 views 폴더에 담긴 pug 파일을 render을 통해 불러온다.__ <br><br>
+
+
+## query string
+
+사이트 주소 구성 중 __path__ 에 따라서 다양한 페이지를 구성할 수 있다.<br>
+그런데 만약 profile path를 제작한다면 어떨까?<br>
+하나의 path에 모든 사람의 정보를 담을 수 없고, path1, path2,, 하기도 힘들다.<br>
+이 때 사용하는 것이 __쿼리 스트링__ 이다.<br><br>
+
+```
+http://a.com/topic?id=1
+http://a.com/topic?id=2
+http://a.com/topic?id=3
+'?' 뒤 부터 쿼리 스트링에 해당한다
+```
+
+id 값에 따라 같은 페이지에 다른 정보를 불러올 수 있다는 것이다.<br><br>
