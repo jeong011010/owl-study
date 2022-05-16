@@ -217,6 +217,8 @@ __템플릿 엔진과 Express를 결합하기 위해서는 views 폴더에 담�
 하나의 path에 모든 사람의 정보를 담을 수 없고, path1, path2,, 하기도 힘들다.<br>
 이 때 사용하는 것이 __쿼리 스트링__ 이다.<br><br>
 
+__쿼리스트링__ 이란 웹앱에 정보를 전달할 때 URL에 약속되어 담겨있는 국제적인 표준<br>
+
 ```
 http://a.com/topic?id=1
 http://a.com/topic?id=2
@@ -225,3 +227,31 @@ http://a.com/topic?id=3
 ```
 
 id 값에 따라 같은 페이지에 다른 정보를 불러올 수 있다는 것이다.<br><br>
+
+app.get 에서 콜백 함수의 req에서 query string 정보를 받아올 수 있다.<br>
+req.query.(쿼리 아이디) 로 해당 데이터를 받아올 수 있다.<br><br>
+
+즉 사용자가 쿼리스트링으로 접속할 때 전달한 정보를 사용할 수 있다.<br><br>
+
+__시멘틱 URL__<br>
+쿼리 스트링에서 path 방식으로 바꿔 깔끔하게 바꿀 수 있다.<br>
+
+```
+query string : localhost:3000/topic?id=1
+symentic URL : localhost:3000/topic/1
+```
+
+시멘틱 URL을 사용할 때, id=1처럼 표시해주는 쿼리스트링과 달리 해당 값의 이름을 알 수 없으므로<br>
+app.get 에서 주소를 받을 때, 값의 이름을 같이 받아준다.<br>
+```app.get('/topic/:id',function(req,res){})```
+<br>
+그리고 req.query.id 와 다르게 req.params.id 로 정보를 받아온다.<br>
+
+query 라는 객체 대신 __params__ 객체를 통해 받아오는 것이다.
+
+## POST
+
+__POST__ : 사용자의 정보를 서버로 전송하는 방식<br>
+
+__GET__ : 어떠한 정보를 서버에 요청해서 가져오는 방식<br>
+
