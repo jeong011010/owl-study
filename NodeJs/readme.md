@@ -253,5 +253,34 @@ query 라는 객체 대신 __params__ 객체를 통해 받아오는 것이다.
 
 __POST__ : 사용자의 정보를 서버로 전송하는 방식<br>
 
-__GET__ : 어떠한 정보를 서버에 요청해서 가져오는 방식<br>
+__GET__ : 어떠한 정보를 서버에 요청해서 가져오는 방식<br><br>
 
+데이터를 받아 서버로 전송할 때 __form__ 태그를 사용하여 전송할 수 있다.<br>
+```
+<form action="/form_receiver">
+      <p>
+        <input type="text" name="title">
+      </p>
+      <p>
+        <textarea name="description"></textarea>
+      </p>
+      <p>
+        <input type="submit">
+      </p>
+    </form>
+```
+
+<br>
+
+form 태그에 __action__ 속성을 통해 form태그 안에서 받은 데이터를 해당 주소로 가져갈 수 있다.<br>
+또한, 데이터를 받을 때 name="데이터이름" 을 지정하여 데이터 이름 안에 데이터를 저장할 수 있다.<br>
+- 위의 경우 title과 description에 정보를 저장하여 form_receiver에 전송
+- 전송시 ```http://localhost:3000/form_receiver?title=d&description=dd``` 로 query string을 통해 정보 전송
+<br><br>
+
+form 태그의 __method__ 속성은 __get__ 으로 설정되어 있음.<br>
+__method__ 속성을 __post__ 로 설정한다면 POST 방식으로 데이터를 전송할 수 있다.<br>
+POST 방식 전송을 하는 이유는??<br>
+-> query string으로 정보를 전송하지 않아 정보를 숨길 수 있음.<br>
+-> 정보를 담을 URL 길이가 제한이 없음.<br>
+-> 브라우저 히스토리에 파라미터와 캐시가 남지 않아 보안적 면에서 유리함.<br>

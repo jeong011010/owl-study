@@ -6,6 +6,16 @@ app.locals.pretty = true; // pug code pretty
 app.set('view engine', 'pug');
 app.set('views', './views');
 
+app.get('/form', function(req,res){
+    res.render('form');
+})
+
+app.get('/form_receiver', function(req,res){
+    var title = req.query.title;
+    var description = req.query.description;
+    res.send(title+','+description);
+})
+
 app.get('/topic', function(req, res){
     //query string의 값은 req로 들어온다
     var topics = [
