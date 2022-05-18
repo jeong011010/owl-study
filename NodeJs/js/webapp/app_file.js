@@ -9,35 +9,34 @@ app.set('views','./views_file');
 app.set('view engine','pug');
 
 app.get('/topic/new', function(req,res){
-    res.render('new');
-})
+    fs.readdir('data',function(err, files){
+        if(err){
+            console.log(err);
+            res.status(500).send('Internal Server Error'); // send 다음 코드는 실행이 되지 않는다.
+        }
+        res.render('new', {topics:files});
+    });
+});
 
-app.get('/topic', function(req,res){
+app.get(['/topic', '/topic/:id'], function(req,res){
     fs.readdir('data',function(err,files){
         if(err){
             console.log(err);
             res.status(500).send('Internal Server Error'); // send 다음 코드는 실행이 되지 않는다.
         }
-        res.render('view', {topics:files});
-    })
-})
-
-app.get('/topic/:id', function(req,res){
-    var id = req.params.id;
-    fs.readdir('data',function(err,files){
-        if(err){
-            console.log(err);
-            res.status(500).send('Internal Server Error'); // send 다음 코드는 실행이 되지 않는다.
+        var id = req.params.id;
+        if(id){
+            fs.readFile('data/'+id,'utf8',function(err, data){
+                if(err){
+                    console.log(err);
+                    res.status(500).send('Internal Server Error'); // send 다음 코드는 실행이 되지 않는다.
+                }
+                res.render('view', {topics:files, title:id, description: data});
+            })
+        } else {
+            res.render('view', {topics:files, title:'Welcome', description:'Hello, JavaScript for server.'});
         }
-        fs.readFile('data/'+id,'utf8',function(err, data){
-            if(err){
-                console.log(err);
-                res.status(500).send('Internal Server Error'); // send 다음 코드는 실행이 되지 않는다.
-            }
-        res.render('view', {topics:files, title:id, description: data});
-        })
     })
-    
 })
 
 app.post('/topic', function(req,res){
@@ -48,7 +47,7 @@ app.post('/topic', function(req,res){
             console.log(err);
             res.status(500).send('Internal Server Error'); // send 다음 코드는 실행이 되지 않는다.
         }
-        res.send(title + ',' + description);
+        res.redirect('/topic/'+title);
     });
 })
 
