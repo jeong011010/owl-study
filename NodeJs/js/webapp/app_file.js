@@ -22,6 +22,24 @@ app.get('/topic', function(req,res){
     })
 })
 
+app.get('/topic/:id', function(req,res){
+    var id = req.params.id;
+    fs.readdir('data',function(err,files){
+        if(err){
+            console.log(err);
+            res.status(500).send('Internal Server Error'); // send 다음 코드는 실행이 되지 않는다.
+        }
+        fs.readFile('data/'+id,'utf8',function(err, data){
+            if(err){
+                console.log(err);
+                res.status(500).send('Internal Server Error'); // send 다음 코드는 실행이 되지 않는다.
+            }
+        res.render('view', {topics:files, title:id, description: data});
+        })
+    })
+    
+})
+
 app.post('/topic', function(req,res){
     var title = req.body.title;
     var description = req.body.description;
