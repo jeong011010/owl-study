@@ -1,17 +1,14 @@
 import React, { useEffect, useState } from 'react';
+import Counter from './components/Counter'
 
 function App() {
   
-  const [count, setCount] = useState(0);
-  useEffect(()=> {
-    console.log(count)
-  }, [count])
-  console.log('rendering');
-
   return (
     <div className="App">
-      <h1>{count}</h1>
-      <button onClick={() => {setCount(count + 1)}}>Click</button>
+      <h1>HI</h1>
+      <Counter />
+      <Counter />
+      <Counter />
     </div>
   );
 }
