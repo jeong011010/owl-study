@@ -52,4 +52,20 @@ const [변수이름, 업데이트변수이름] = useState(값);
 위와 같이 작성하여 사용하면, 
 - 변수이름을 가져와 사용할 수 있으며
 - 변수의 값이 바꼈을 때, reload되지 않으면 화면에 적용되지 않는 점을 보완하여 __업데이트 함수__ 를 사용하여 값을 바꿀 시 자동으로 reload를 해주어 화면에 적용이 되도록 해준다.
-<br>
+<br><br>
+
+form 태그를 사용하여 useState를 응용할 수 있다.<br>
+```js
+const [username, setUsername] = useState('');
+const onSubmit = (event)=>{
+    console.log(username);
+};
+
+<form onSubmit={onSubmit}>
+    <input type="text" onChange={(e)=>setUsername(e.target.value)}/> <br/> 
+    <button type="submit">Login</button>
+</form>
+
+// form태그는 onSubmit 속성의 값으로 type="submit" 버튼을 통해 이동 및 제출을 할 수 있다.
+// 위 코드에서는 input type="text" 에서 값이 바뀔 때 마다 useState의 변경 변수를 이용하여 계속해서 초기화 해줬다.
+```

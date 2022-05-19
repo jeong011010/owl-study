@@ -1,30 +1,27 @@
 import React, { useState } from 'react';
 
 function App() {
-  const [text, setText] = useState('Kossie');
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState(''); 
+
   const onSubmit = () => {
     alert('submitted');
-  }
+  };
 
-  const onKeyUp = (event) => {
-    if(event.keyCode === 13){
-      onSubmit();
-    }
-  }
-
-
-  const updateText = () => {
-    setText('Coder');
-  }
 
   return (
     <div className="App">
-      <input onKeyUp={onKeyUp}/>
-      <button onClick={onSubmit}>Submit</button>
-
-      <br/><br/>
-      <span>{text}</span>
-      <button onClick={updateText}>Update</button>
+      <form onSubmit={onSubmit}>
+        <input placeholder="Username"
+        value={username}
+        onChange={(e)=> setUsername(e.target.value)}
+        /> <br/>
+        <input placeholder="Password"
+        value={password}
+        onChange={(e)=> setPassword(e.target.value)}
+        /> <br/>
+        <button type="submit">Login</button>
+      </form>
     </div>
   );
 }
