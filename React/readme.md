@@ -3,3 +3,9 @@
 코지 코더 님의 React 강의 수강
 
 ------------------------
+
+```
+cd C:\git\owl-study\React\my-app
+npm start
+```
+
