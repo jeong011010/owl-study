@@ -291,3 +291,4 @@ Post 에서 req 데이터를 받을 때는 __req.body.데이터이름__ 으로 �
 기본적으로 post 방식으로 전달된 데이터는 정의되어 있지 않다. 그렇기에 body-parser 또는 multer와 같은 __middleware__ 을 사용하여 받을 수 있다.<br>
 우리는 body-parser 모듈을 사용했다.<br>
 - 모든 요청은 body-parser을 먼저 거치며 해당 객체가 가지고 있지 않았던 'body'를 추가해준다.<br>
+

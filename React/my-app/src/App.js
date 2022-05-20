@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Counter from './components/Counter'
+import Movie from './components/Movie'
 
 function App() {
   const movies = [
@@ -10,10 +11,7 @@ function App() {
 
   const renderMovies = movies.map(movie => {
     return (
-      <div className="movie" key={movie.title}>
-          <div className="movie-title">{movie.title}</div>
-          <div className="movie-year">{movie.year}</div>
-        </div>
+      <Movie movie={movie}/>
     )
   })
 
