@@ -4,15 +4,18 @@ import MovieForm from './components/MovieForm';
 
 function App() {
   const [movies, setMovies] = useState([]);
-  useEffect(() => {
-    console.log('render');
-  });
 
-  const renderMovies = movies.map(movie => {
+  const removeMovie = (id) => {
+    setMovies(movies.fitler(movie => {
+      return movie.id !== id;
+    }))
+  };
+
+  const renderMovies = movies.length ? movies.map(movie => {
     return (
-      <Movie movie={movie} key={movie.title}/>
+      <Movie movie={movie} key={movie.title} removeMovie={removeMovie}/>
     )
-  })
+  }) : '추가된 영화가 없습니다.';
 
   const addMovie = (movie) => {
     setMovies([
