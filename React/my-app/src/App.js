@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import Counter from './components/Counter'
 import Movie from './components/Movie'
+import MovieForm from './components/MovieForm';
 
 function App() {
-  const [movieTitle, setMovieTitle] = useState('');
-  const [movieYear, setMovieYear] = useState('');
   const [movies, setMovies] = useState([]);
   useEffect(() => {
     console.log('render');
@@ -16,34 +14,18 @@ function App() {
     )
   })
 
-  const addMovie = () => {
-    event.preventDefault();
+  const addMovie = (movie) => {
     setMovies([
      ...movies,
-     {
-      title: movieTitle,
-      year: movieYear,
-     }
-   ])
+     movie
+    ]);
   };
 
   return (
     <div className="App">
-      <h1>Movie list</h1>
-        <form onSubmit={addMovie}>
-          <input 
-            type="text"
-            placeholder="영화제목"
-            onChange={e=>setMovieTitle(e.target.value)}
-          /><br/>
-          <input 
-            type="text"
-            placeholder="개봉년도"
-            onChange={e=>setMovieYear(e.target.value)}
-          /><br/>
-          <button type="submit">영화 추가</button>
-        </form>
-        {renderMovies}
+      <h1>Movie list</h1>  
+      <MovieForm addMovie={addMovie}/>
+      {renderMovies}
     </div>
   );
 }
