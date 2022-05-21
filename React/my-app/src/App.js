@@ -6,9 +6,10 @@ function App() {
   const [movies, setMovies] = useState([]);
 
   const removeMovie = (id) => {
-    setMovies(movies.fitler(movie => {
+    console.log(id);
+    setMovies(movies.filter(movie => {
       return movie.id !== id;
-    }))
+    }));
   };
 
   const renderMovies = movies.length ? movies.map(movie => {
