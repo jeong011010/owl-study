@@ -103,6 +103,18 @@ __Component__ 는 리액트로 만들어진 앱을 이루는 최소한의 단위
 또한 컴포넌트를 만들 때, return 값으로 하나의 태그로 감싸줘야지 에러가 나지 않는다.<br>
 여러개의 태그가 retunr이 되어야 하는 경우에, 하나의 div 태그로만 return이 되고 그 안에 여러 태그들이 있어야 에러가 없다.<br><br>
 
+<details>
+<summary>React-Router-DOM v6 관련 에러</summary>
+
+[에러가 발생한 과정 Youtube 링크](https://www.youtube.com/watch?v=6wIPEfL1mWM&list=PLB7CpjPWqHOuf62H44TMkMIsqfkIzcEcX&index=20)<br>
+
+위 강의에서는 React-Router-Dom V5로 진행을 하고 있다.<br>
+현재 나의 버전은 v6이며 동시에 변경사항이 있다.<br><br>
+- Switch -> routes
+- Components -> elements
+[도움받은 참고자료](https://velog.io/@nemo/react-error-routes)<br>
+</details>
+
 ### props
 
 함수의 매개변수처럼 컴포넌트에서도 값을 전달할 수 있다.<br>
