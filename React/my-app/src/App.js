@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import MovieForm from './components/MovieForm';
 import Navbar from './components/Navbar';
+import Users from './components/Users';
 import {
   Link,
   BrowserRouter,
@@ -17,7 +18,7 @@ function App() {
         <Routes>
           <Route path="/movies" element={<MovieForm/>}/>
           <Route path="/" element={<h1>HOME</h1>}/>
-          <Route path="/users" element={<h1>USERS</h1>}/>
+          <Route path="/users" element={<Users/>}/>
         
         </Routes>
       </BrowserRouter>
