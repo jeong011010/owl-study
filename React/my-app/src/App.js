@@ -2,6 +2,11 @@ import React, { useEffect, useState } from 'react';
 import Movie from './components/Movie'
 import MovieForm from './components/MovieForm';
 import Navbar from './components/Navbar';
+import {
+  BroswerRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom'
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -27,12 +32,14 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <Navbar />
-      <h1>Movie list</h1>  
-      <MovieForm addMovie={addMovie}/>
-      {renderMovies}
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <h1>Movie list</h1>  
+        <MovieForm addMovie={addMovie}/>
+        {renderMovies}
+      </div>
+    </Router>
   );
 }
 
