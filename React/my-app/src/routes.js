@@ -1,5 +1,6 @@
 import Movies from './pages/Movies';
 import Users from './pages/Users';
+import User from './pages/User';
 import Home from './pages/Home';
 
 const route = [
@@ -15,6 +16,10 @@ const route = [
         path: '/users',
         component: Users
     },
+    {
+        path: '/users/:id',
+        component: User
+    }
 ];
 
 export default route;
