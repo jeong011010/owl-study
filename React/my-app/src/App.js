@@ -15,12 +15,14 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Navbar/>
-        <Routes>
-          <Route path="/movies" element={<MovieForm/>}/>
-          <Route path="/" element={<h1>HOME</h1>}/>
-          <Route path="/users" element={<Users/>}/>
-        
-        </Routes>
+        <div className="px-5">
+          <Routes>
+            <Route path="/movies" element={<MovieForm/>}/>
+            <Route path="/" element={<h1>HOME</h1>}/>
+            <Route path="/users" element={<Users/>}/>
+          
+          </Routes>
+        </div>
       </BrowserRouter>
     </div>
   );
