@@ -1,33 +1,11 @@
 import React, { useState } from 'react';
 import InputField from './InputField';
-import Movie from './Movie'
 
-const MovieForm = () => {
+const MovieForm = ({addMovie}) => {
   const [movieTitle, setMovieTitle] = useState('');
   const [movieYear, setMovieYear] = useState('');
   const [titleError, setTitleError] =useState('');
   const [yearError, setYearError] =useState('');
-  const [movies, setMovies] = useState([]);
-
-  const removeMovie = (id) => {
-    console.log(id);
-    setMovies(movies.filter(movie => {
-      return movie.id !== id;
-    }));
-  };
-
-  const renderMovies = movies.length ? movies.map(movie => {
-    return (
-      <Movie movie={movie} key={movie.title} removeMovie={removeMovie}/>
-    )
-  }) : '추가된 영화가 없습니다.';
-
-  const addMovie = (movie) => {
-    setMovies([
-     ...movies,
-     movie
-    ]);
-  };
 
   const resetForm = () => {
     setMovieTitle('');
@@ -70,7 +48,6 @@ const MovieForm = () => {
 
   return (
     <div>
-      <h1>Movie list</h1>
       <form onSubmit={onSubmit}>
           <InputField
             type="text"
@@ -88,7 +65,6 @@ const MovieForm = () => {
           />
           <button type="submit">영화 추가</button>
       </form>
-      {renderMovies}
     </div>
   );
 }

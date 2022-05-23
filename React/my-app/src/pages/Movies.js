@@ -1,15 +1,21 @@
-import React, {useState, useEffect} from 'react';
-import MovieForm from './MovieForm';
-import Movie from './Movie';
+import React, {useState} from 'react';
+import MovieForm from '../components/MovieForm';
+import Movie from '../components/Movie';
 
 const Movies = () => {
     const [movies, setMovies] = useState([]);
 
     const removeMovie = (id) => {
-        console.log(id);
         setMovies(movies.filter(movie => {
-        return movie.id !== id;
+            return movie.id !== id;
         }));
+    };
+
+    const addMovie = (movie) => {
+        setMovies([
+        ...movies,
+        movie
+        ]);
     };
 
     const renderMovies = movies.length ? movies.map(movie => {
@@ -21,7 +27,7 @@ const Movies = () => {
     return(
         <>
             <h1>Movie list</h1>
-            <MovieForm/>
+            <MovieForm addMovie={addMovie}/>
             {renderMovies}
         </>
     )

@@ -1,10 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import Movies from './components/Movies';
+import React from 'react';
 import Navbar from './components/Navbar';
-import Users from './components/Users';
-import Home from './components/Home';
+import routes from './routes';
 import {
-  Link,
   BrowserRouter,
   Routes,
   Route,
@@ -18,9 +15,14 @@ function App() {
         <Navbar/>
         <div className="px-5">
           <Routes>
-            <Route path="/movies" element={<Movies/>}/>
-            <Route path="/" element={<Home/>}/>
-            <Route path="/users" element={<Users/>}/>
+            {routes.map(route => {
+              return (
+                <Route key={route.path} 
+                path={route.path} 
+                element={<route.component/>}
+                />
+              )
+            })}
           
           </Routes>
         </div>
