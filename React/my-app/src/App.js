@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import MovieForm from './components/MovieForm';
+import Movies from './components/Movies';
 import Navbar from './components/Navbar';
 import Users from './components/Users';
+import Home from './components/Home';
 import {
   Link,
   BrowserRouter,
@@ -17,8 +18,8 @@ function App() {
         <Navbar/>
         <div className="px-5">
           <Routes>
-            <Route path="/movies" element={<MovieForm/>}/>
-            <Route path="/" element={<h1>HOME</h1>}/>
+            <Route path="/movies" element={<Movies/>}/>
+            <Route path="/" element={<Home/>}/>
             <Route path="/users" element={<Users/>}/>
           
           </Routes>
