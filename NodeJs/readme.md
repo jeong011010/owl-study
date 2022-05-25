@@ -292,3 +292,6 @@ Post 에서 req 데이터를 받을 때는 __req.body.데이터이름__ 으로 �
 우리는 body-parser 모듈을 사용했다.<br>
 - 모든 요청은 body-parser을 먼저 거치며 해당 객체가 가지고 있지 않았던 'body'를 추가해준다.<br>
 
+## Mongo DB
+
+[Mongo DB 설치 강좌](https://www.inflearn.com/course/%EB%94%B0%EB%9D%BC%ED%95%98%EB%A9%B0-%EB%B0%B0%EC%9A%B0%EB%8A%94-%EB%85%B8%EB%93%9C-%EB%A6%AC%EC%95%A1%ED%8A%B8-%EA%B8%B0%EB%B3%B8/lecture/37065) - [Mongo DB 사이트](https://cloud.mongodb.com)<br><br>
