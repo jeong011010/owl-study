@@ -7,7 +7,7 @@ const userSchema = mongoose.Schema({
     },
     email: {
         type: String,
-        trim: true; // space 없애주는것
+        trim: true, // space 없애주는것
         unique: 1
     },
     password: {
