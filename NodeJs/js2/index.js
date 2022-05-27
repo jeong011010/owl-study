@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const {User} = require('./models/User');
 const {auth} = require('./middleware/auth');
-cosnt config = require('./config/key')
+const config = require('./config/key')
 
 app.use(bodyParser.urlencoded({extended: true}));
 
@@ -44,7 +44,7 @@ app.post('api/users/login', (req,res) => {
         message: "제공된 이메일에 해당하는 유저가 없습니다."
       })
     }
-    user.comparePassword(req.body.passord, (err, isMatch){
+    user.comparePassword(req.body.passord, (err, isMatch) => {
       if(!isMatch)
         return res.json({ loginSuccess: false, message: "비밀번호가 틀렸습니다."})
       
@@ -70,6 +70,17 @@ app.get('/api/users/auth', auth , (req, res)=>{
     role: req.user.role,
     image: req.user.image
   })
+})
+
+app.get('/api/users/logout', auth, (req, res)=>{
+  User.findOneAndUpdate({ _id: req.user._id},
+    {token : ""}
+    , (err, user)=>{
+      if(err)return res.json({success:false, err});
+      return res.status(200).sned({
+        success: true
+      })
+    })
 })
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
