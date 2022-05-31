@@ -31,6 +31,7 @@ function LoginPage() {
           history('/')
         } else {
           alert('Error')
+          console.log(response)
         }
       })
   }
@@ -49,7 +50,7 @@ function LoginPage() {
         <input type="password" value={Password} onChange={onPasswordHandler} />
 
         <br />
-        <button>
+        <button type="submit">
           Login
         </button>
       </form>
