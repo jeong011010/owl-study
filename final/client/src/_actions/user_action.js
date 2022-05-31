@@ -3,12 +3,14 @@ import {
     LOGIN_USER
 } from './types';
 
-export function loginUser(data){
-    const request = axios.post('http://localhost:5000/api/users/login', data)
-        .then(response =>  response.data )
-    
+export function loginUser(dataTosubmit) {
+
+    const request = axios.post('/api/users/login', dataTosubmit)
+        .then(response => response.data);
+
     return {
-        type: "LOGIN_USER",
+        type: LOGIN_USER,
         payload: request
-    }
+    } // send to reducer
+
 }

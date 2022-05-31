@@ -1,7 +1,8 @@
-import { Axios } from 'axios';
-import React, {useState} from 'react'
-import {useDispatch} from 'react-redux'
-import {loginUser} from '../../../_actions/user_action'
+import { useDispatch } from "react-redux";
+import React, { useState } from "react";
+import { loginUser } from '../../../_actions/user_action'
+
+import { useNavigate } from 'react-router-dom'
 function LoginPage() {
 
   const dispatch = useDispatch();
@@ -15,6 +16,7 @@ function LoginPage() {
   const onPasswordHandler = (event) => {
     setPassword(event.currentTarget.value);
   }
+  const history = useNavigate();
 
   const onSubmitHandler = (event) => {
     event.preventDefault();
@@ -27,7 +29,7 @@ function LoginPage() {
     dispatch(loginUser(body))
       .then(response => {
         if(response.payload.loginSuccess){
-          body.history.push('/')
+          history('/')
         } else {
           alert('Error')
         }
