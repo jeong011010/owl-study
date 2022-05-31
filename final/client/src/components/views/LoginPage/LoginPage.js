@@ -17,7 +17,6 @@ function LoginPage() {
     setPassword(event.currentTarget.value);
   }
   const history = useNavigate();
-
   const onSubmitHandler = (event) => {
     event.preventDefault();
 
