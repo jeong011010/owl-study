@@ -15,7 +15,8 @@ const userSchema = mongoose.Schema({
     },
     password: {
         type: String,
-        minlength: 5
+        minlength: 5,
+        maxlegnth: 50
     },
     lastname: {
         type: String,
@@ -54,7 +55,7 @@ userSchema.pre('save', function( next ){
 
 userSchema.methods.comparePassword = function(plainPassword, cb) {
     bcrypt.compare(plainPassword, this.password, function(err, insMatch){
-        if(err) return cb(err),
+        if(err) return cb(err);
         cb(null, isMatch)
     })
 }

@@ -3,8 +3,8 @@ import {
     LOGIN_USER
 } from './types';
 
-export function loginUser(dataTosubmit){
-    const request = axios.post('/api/user/login', dataTosubmit)
+export function loginUser(data){
+    const request = axios.post('http://localhost:5000/api/users/login', data)
         .then(response =>  response.data )
     
     return {

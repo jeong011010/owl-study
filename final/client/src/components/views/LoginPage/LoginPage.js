@@ -26,7 +26,7 @@ function LoginPage() {
 
     dispatch(loginUser(body))
       .then(response => {
-        if(response.payload.loginSuccesss){
+        if(response.payload.loginSuccess){
           body.history.push('/')
         } else {
           alert('Error')
@@ -42,9 +42,9 @@ function LoginPage() {
       <form style={{ display:'flex', flexDirection: 'column'}}
         onSubmit={onSubmitHandler}
       >
-        <labe>Email</labe>
+        <label>Email</label>
         <input type="email" value={Email} onChange={onEmailHandler} />
-        <labe>Password</labe>
+        <label>Password</label>
         <input type="password" value={Password} onChange={onPasswordHandler} />
 
         <br />

@@ -19,10 +19,6 @@ mongoose.connect(config.mongoURI)
 
 app.get('/', (req,res) => res.send('Hello World!'))
 
-app.get('/api/hello', (req,res) => {
-  res.send("안녕하세요~");
-})
-
 app.post('api/users/register', (req, res) => {
 
   // 회원 가입 할때 필요한 정보들을 client에서 가져오면
@@ -51,14 +47,14 @@ app.post('api/users/login', (req,res) => {
     user.comparePassword(req.body.passord, (err, isMatch) => {
       if(!isMatch)
         return res.json({ loginSuccess: false, message: "비밀번호가 틀렸습니다."})
+    })
+    user.generateToken((err, user) => {
+      if(err) return res.status(400).send(err);
       
-      user.generateToken((err, user) => {
-        if(err) return res.status(400).send(err);
-        
-        res.cookie("x_auth", user.token)
-        .status(200)
-        .json({loginSuccess: true, userId: user._id})
-      })
+      res.cookie("x_auth", user.token)
+      .status(200)
+      .json({loginSuccess: true, userId: user._id})
+    
     })
   })
 })
