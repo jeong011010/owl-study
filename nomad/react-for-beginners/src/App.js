@@ -15,10 +15,28 @@ function App() {
   useEffect(()=> {
     getMoveis();
   }, []);
-  console.log(movies);
-  return <div>
-    {loading ? <h1>Loading...</h1> : null};
-  </div>;
+
+  return (
+    <div>
+      {loading ? (
+        <h1>Loading...</h1>
+      ) : (
+        <div>
+          {movies.map(movie => (
+            <div key={movie.id}>
+              <img src={movie.medium_cover_image}/>
+              <h2>{movie.title}</h2>
+              <p>{movie.summary}</p>
+              
+              <ul>
+                {movie.genres.map(g => <li>{g}</li>)}
+              </ul>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
 }
 
 export default App;
